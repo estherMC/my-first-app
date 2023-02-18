@@ -29,10 +29,10 @@
 <p>Task 3</p>
 <button class="btn btn-primary" (click)="onToggleDetails()">Display Details</button>
 <p *ngIf="showSecret">Secret Password = 'tuna'</p>
-<div *ngFor="let logBtn of logBtnClicks">
+<div *ngFor="let logBtn of logBtnClicks; let i = index">
     <p 
-    [ngStyle]="{backgroundColor: logBtn >= 5 ? 'blue' : 'transparent'}"
-    [ngClass]="{'white-text': logBtn >= 5}">
+    [ngStyle]="{backgroundColor: i >= 5 ? 'blue' : 'transparent'}"
+    [ngClass]="{'white-text': i >= 5}">
     Element: {{ logBtn }}
 </p>
 </div>

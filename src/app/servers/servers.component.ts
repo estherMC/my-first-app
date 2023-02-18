@@ -40,7 +40,8 @@ export class ServersComponent implements OnInit{
 
   onToggleDetails(){
     this.showSecret = !this.showSecret;
-    this.logBtnClicks.push(this.logBtnClicks.length+1);
+    // this.logBtnClicks.push(this.logBtnClicks.length+1);
+    this.logBtnClicks.push(new Date());
   }
 
 }
