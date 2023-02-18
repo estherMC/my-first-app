@@ -25,3 +25,14 @@
 <app-server *ngFor="let server of servers"></app-server>
 <!-- <warning-alert></warning-alert> -->
 <!-- <success-alert></success-alert> -->
+
+<p>Task 3</p>
+<button class="btn btn-primary" (click)="onToggleDetails()">Display Details</button>
+<p *ngIf="showSecret">Secret Password = 'tuna'</p>
+<div *ngFor="let logBtn of logBtnClicks">
+    <p 
+    [ngStyle]="{backgroundColor: logBtn >= 5 ? 'blue' : 'transparent'}"
+    [ngClass]="{'white-text': logBtn >= 5}">
+    Element: {{ logBtn }}
+</p>
+</div>

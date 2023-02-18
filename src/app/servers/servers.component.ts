@@ -14,6 +14,9 @@ export class ServersComponent implements OnInit{
   serverName = '';
   serverCreated = false;
   servers = ['TestServer', 'TestServer2'];
+  
+  showSecret = false;
+  logBtnClicks = [];
 
   constructor(){
     setTimeout(() => {
@@ -33,6 +36,11 @@ export class ServersComponent implements OnInit{
 
   onUpdateServerName(event: Event){
     this.serverName = (<HTMLInputElement>event.target).value;
+  }
+
+  onToggleDetails(){
+    this.showSecret = !this.showSecret;
+    this.logBtnClicks.push(this.logBtnClicks.length+1);
   }
 
 }
